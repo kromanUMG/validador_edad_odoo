@@ -1,6 +1,9 @@
 # ✅ Instrucciones para cualquier miembro del equipo
-##    📅 Día 2 – Estructura del módulo y Dockerfile de Odoo
-###   Objetivo: 🌐 Acceder a Odoo desde el navegador
+##    Hasta: 📅 Día 2 – Estructura del módulo y Dockerfile de Odoo
+###   Objetivo Final: 🌐 Acceder a Odoo desde el navegador
+
+
+---
 
 
 ### 1. Clonar el repositorio y entrar al proyecto
