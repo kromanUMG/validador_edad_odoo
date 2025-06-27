@@ -46,6 +46,8 @@ Pero si ya está todo como en el repositorio, no hay nada que hacer aquí.
 
 ### 3. Levantar el entorno completo con Docker
 
+Descomentar la linea que dice Command en el archivo docker-compose.yml
+
 Desde la raíz del proyecto:
 
 ```bash
@@ -59,6 +61,18 @@ Este comando:
 - Expone el sistema en `http://localhost:8069`
 
 ---
+
+detener los contenedores
+
+```bash
+docker-compose down
+```
+
+comentar nuevamente la linea Command e iniciar cotenedores
+
+```bash
+docker-compose up -d
+```
 
 ### 4. Esperar a que Odoo esté listo
 
