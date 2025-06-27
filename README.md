@@ -38,7 +38,7 @@ Desarrollar un módulo para Odoo 16 que valide automáticamente la fecha de naci
 | 9  | Levantar contenedores Docker con `docker-compose up -d`                                     | DEV1 | Completado | Alta      | Día 2 |
 | 10 | Validar acceso web a Odoo en `http://localhost:8069`                                        | PM   | Completado | Alta      | Día 2 |
 | 11 | Crear usuario administrador desde consola Odoo (`odoo shell`)                               | DEV1 | Completado | Alta      | Día 2 |
-| 12 | Validar inicio de sesión con `admin@example.com` / `admin123`                               | PM   | Completado | Alta      | Día 2 |
+| 12 | Validar inicio de sesión con usuario admin                                                  | PM   | Completado | Alta      | Día 2 |
 
 
 
