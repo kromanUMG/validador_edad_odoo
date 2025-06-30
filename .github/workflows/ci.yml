@@ -1,0 +1,54 @@
+name: CI Odoo Validador Edad
+
+on:
+  push:
+    branches: [ dev, main ]
+  pull_request:
+    branches: [ dev, main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_DB: postgres
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd="pg_isready"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git wget python3-pip libpq-dev
+        pip install wheel
+        pip install -r requirements.txt || true
+
+    - name: Download Odoo
+      run: |
+        git clone --depth 1 --branch 16.0 https://www.github.com/odoo/odoo.git
+        mv odoo odoo_src
+
+    - name: Run Odoo Tests
+      run: |
+        cd odoo_src
+        python3 odoo-bin -d test_db --db_host=localhost --db_user=odoo --db_password=odoo \
+        --addons-path=addons,../addons \
+        --test-enable --stop-after-init
+      env:
+        PYTHONUNBUFFERED: 1
