@@ -39,6 +39,11 @@ Desarrollar un módulo para Odoo 16 que valide automáticamente la fecha de naci
 | 10 | Validar acceso web a Odoo en `http://localhost:8069`                                        | PM   | Completado | Alta      | Día 2 |
 | 11 | Crear usuario administrador desde consola Odoo (`odoo shell`)                               | DEV1 | Completado | Alta      | Día 2 |
 | 12 | Validar inicio de sesión con usuario admin                                                  | PM   | Completado | Alta      | Día 2 |
+| 19  | Implementar lógica de validación de edad con constrains                                    | DEV2 | Completado | Alta      | Día 3 |
+| 20  | Agregar campo fecha_nacimiento en vista XML                                                | DEV3 | Completado | Alta      | Día 3 |
+| 21  | Validar usuarios mayores y menores de 13 años                                              | QA   | Completado | Alta      | Día 3 |
+
+
 
 
 
