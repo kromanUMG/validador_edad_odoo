@@ -1,1 +1,1 @@
-# Se cargará el modelo user.py más adelante
+from . import user
