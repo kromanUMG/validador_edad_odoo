@@ -38,6 +38,7 @@ jobs:
         sudo apt-get install -y git wget python3-pip libpq-dev
         pip install wheel
         pip install -r requirements.txt || true
+        pip install PyPDF2
 
     - name: Download Odoo
       run: |
