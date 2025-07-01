@@ -32,6 +32,7 @@ services:
     volumes:
       - ./addons:/mnt/extra-addons
       - odoo-web-data:/var/lib/odoo
+      - ./odoo.conf:/etc/odoo/odoo.conf
     #descomentar la primera vez que ejecuta docker-compose up -d
     #command: odoo -d odoo -i base --without-demo=all --stop-after-init
 

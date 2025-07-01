@@ -11,5 +11,9 @@
     ],
     'installable': True,
     'auto_install': False,
-    'test': ['tests/test_validacion_edad.py',],
+    'test': [
+        'tests/test_validacion_edad.py',
+    ],
+
+>>>>>>> Stashed changes
 }
