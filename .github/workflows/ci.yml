@@ -14,12 +14,12 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_DB: postgres
+          POSTGRES_DB: test_db
           POSTGRES_USER: odoo
           POSTGRES_PASSWORD: odoo
         ports: ['5432:5432']
         options: >-
-          --health-cmd="pg_isready"
+          --health-cmd="pg_isready -U odoo"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
@@ -43,6 +43,11 @@ jobs:
       run: |
         git clone --depth 1 --branch 16.0 https://www.github.com/odoo/odoo.git
         mv odoo odoo_src
+
+    - name: Esperar a que la base de datos esté lista
+      run: |
+        echo "Esperando 30 segundos para que PostgreSQL esté listo..."
+        sleep 30
 
     - name: Run Odoo Tests
       run: |
